@@ -453,9 +453,10 @@
                             senderEmail: "test@gmail.com",
                             recipientEmail: "olamider868@gmail.com",
                             subject:service,
-                            htmlContent
+                            htmlContent:htmlContent
                         })
                     })
+                      const data = await res.json(); 
                     if (res.ok) {
                         showToast("Mail delivered ✅", "success");
                         form.reset(); // clear form
