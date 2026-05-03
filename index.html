@@ -386,15 +386,24 @@
         async function sendMail(params) {
             try {
                 const res = await fetch('https://ads-api-new.vercel.app/api/send',{
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "ADS-api-key": "ALH_9f3A2cE7QwR8mKX1T4bVYpN6LZJd0HUS"
-                }
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "ADS-api-key": "ALH_9f3A2cE7QwR8mKX1T4bVYpN6LZJd0HUS"
+                    },
+                    body: JSON.stringify({
+                        senderEmail: "test@gmail.com",
+                        recipientEmail: "olamider868",
+                        subject: ,
+                        htmlContent:
+                    })
                 })
+                if (res.ok){
+                    showToast("Mail delivered✅", "success")
+                }
                 
             } catch (error) {
-                
+                console.error("failed: ", error)
             }
         }
 </script>
