@@ -461,12 +461,12 @@
                         showToast("Mail delivered ✅", "success");
                         form.reset(); // clear form
                     } else {
-                        showToast("Failed to send ❌", "error");
+                        showToast(data.message, "error");
                     }
                     
                 } catch (error) {
                     console.error("failed: ", error)
-                    showToast("Something went wrong ❌", error, "error");
+                    showToast("Something went wrong ",  "error");
                 }
     })
 </script>
